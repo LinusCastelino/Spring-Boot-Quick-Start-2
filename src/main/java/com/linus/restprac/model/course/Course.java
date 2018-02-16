@@ -1,25 +1,31 @@
-package com.linus.restprac.model.topic;
+package com.linus.restprac.model.course;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import com.linus.restprac.model.topic.Topic;
+
 @Entity    //To inform spring that Topic maps to a relational database
-public class Topic {
+public class Course {
 	
 	@Id    //To inform spring that id attribute in this class is a primary key
 	private int id;
 	private String name;
 	private String description;
 	
-	public Topic() {
+	private Topic topic;
+	
+	public Course() {
 		
 	}
 	
-	public Topic(int id, String name, String description) {
+	public Course(int id, String name, String description, int topicId) {
 		super();
 		this.name = name;
 		this.id = id;
 		this.description = description;
+		
+		this.setTopic(new Topic(topicId,"",""));
 	}
 	
 	
@@ -40,6 +46,14 @@ public class Topic {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Topic getTopic() {
+		return topic;
+	}
+
+	public void setTopic(Topic topic) {
+		this.topic = topic;
 	}
 	
 	
