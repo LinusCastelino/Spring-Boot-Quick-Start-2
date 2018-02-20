@@ -13,9 +13,9 @@ public class CourseService {
 	@Autowired
 	private CourseRepository courseRepo;
 	
-	public List<Course> getAllCourses(){
+	public List<Course> getAllCourses(int topicId){
 		List<Course> allCourses = new ArrayList<>();;
-		courseRepo.findAll().forEach(allCourses::add);
+		courseRepo.findByTopicId(topicId).forEach(allCourses::add);
 		return allCourses;
 	}
 	
@@ -29,8 +29,8 @@ public class CourseService {
 		//CrudRepository.save() inserts it into the DB.
 	}
 	
-	public void updateCourse(int id, Course topic) {
-		courseRepo.save(topic);
+	public void updateCourse(int id, Course course) {
+		courseRepo.save(course);
 		//If an entity with the given ID is available in the DB
 		//CrudRepository.save() updates the entity in the DB.
 	}

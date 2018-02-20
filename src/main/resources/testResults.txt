@@ -1,0 +1,66 @@
+localhost:8080/topics
+[
+    {
+        "id": 1001,
+        "name": "JavaScript",
+        "description": "JavaScript Essentials"
+    },
+    {
+        "id": 1002,
+        "name": "NodeJS",
+        "description": "NodeJS Basics"
+    },
+    {
+        "id": 1003,
+        "name": "Spring",
+        "description": "Spring Framework for Beginners"
+    },
+    {
+        "id": 1004,
+        "name": "Java EE Updated",
+        "description": "Enterprise Java Updated with PUT request"
+    }
+]
+
+
+
+
+
+
+
+localhost:8080/topics/1003/courses
+[
+    {
+        "id": 10031,
+        "name": "Spring Legacy",
+        "description": "Spring Legacy Tutorials",
+        "topic": {
+            "id": 1003,
+            "name": "Spring",
+            "description": "Spring Framework for Beginners"
+        }
+    },
+    {
+        "id": 10032,
+        "name": "Spring Boot",
+        "description": "Spring Boot Tutorials",
+        "topic": {
+            "id": 1003,
+            "name": "Spring",
+            "description": "Spring Framework for Beginners"
+        }
+    },
+    {
+        "id": 10033,
+        "name": "Spring XD",
+        "description": "Spring XD Tutorials",
+        "topic": {
+            "id": 1003,
+            "name": "Spring",
+            "description": "Spring Framework for Beginners"
+        }
+    }
+]
+
+
+
